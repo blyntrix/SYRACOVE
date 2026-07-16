@@ -69,25 +69,88 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
+  meta: [
+    { charSet: "utf-8" },
+    { name: "viewport", content: "width=device-width, initial-scale=1" },
+
+    {
+      title: "Syracove | Luxury Villas Across Kenya's Coast",
+    },
+
+    {
+      name: "description",
+      content:
+        "Syracove offers handpicked luxury villas across Kenya's stunning coastline. Discover elegant stays, breathtaking ocean views, and unforgettable holiday experiences.",
+    },
+
+    {
+      name: "keywords",
+      content:
+        "Syracove, Kenya villas, coastal villas Kenya, luxury villas Kenya, holiday homes Kenya, beach villas, Diani villas, Watamu villas, Kilifi villas, Mombasa accommodation",
+    },
+
+    {
+      name: "author",
+      content: "Syracove",
+    },
+
+    {
+      property: "og:title",
+      content: "Syracove | Luxury Villas Across Kenya's Coast",
+    },
+
+    {
+      property: "og:description",
+      content:
+        "Escape to luxury. Explore premium villas along Kenya's beautiful coastline with Syracove.",
+    },
+
+    {
+      property: "og:type",
+      content: "website",
+    },
+
+    {
+      property: "og:image",
+      content: "/og-image.jpg",
+    },
+
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+
+    {
+      name: "twitter:title",
+      content: "Syracove",
+    },
+
+    {
+      name: "twitter:description",
+      content:
+        "Luxury villas across Kenya's Coast.",
+    },
+  ],
+
+  links: [
+  {
+    rel: "stylesheet",
+    href: appCss,
+  },
+  {
+    rel: "icon",
+    href: "/favicon.ico",
+  },
+  {
+    rel: "apple-touch-icon",
+    href: "/apple-touch-icon.png",
+  },
+  {
+    rel: "manifest",
+    href: "/site.webmanifest",
+  },
+],
+}),
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
