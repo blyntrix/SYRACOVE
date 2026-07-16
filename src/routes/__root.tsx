@@ -68,7 +68,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
+head: () => ({
   meta: [
     { charSet: "utf-8" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -111,6 +111,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     },
 
     {
+      property: "og:url",
+      content: "https://syracove.blyntrix.workers.dev",
+    },
+
+    {
       property: "og:image",
       content: "/og-image.jpg",
     },
@@ -121,14 +126,38 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     },
 
     {
+      name: "twitter:image",
+      content: "/og-image.jpg",
+    },
+
+    {
       name: "twitter:title",
-      content: "Syracove",
+      content: "Syracove | Luxury Villas Across Kenya's Coast",
     },
 
     {
       name: "twitter:description",
       content:
-        "Luxury villas across Kenya's Coast.",
+        "Escape to luxury. Explore premium villas across Kenya's beautiful coastline.",
+    },
+  ],
+
+  links: [
+    {
+      rel: "stylesheet",
+      href: appCss,
+    },
+    {
+      rel: "icon",
+      href: "/favicon.ico",
+    },
+    {
+      rel: "apple-touch-icon",
+      href: "/apple-touch-icon.png",
+    },
+    {
+      rel: "manifest",
+      href: "/site.webmanifest",
     },
   ],
 
